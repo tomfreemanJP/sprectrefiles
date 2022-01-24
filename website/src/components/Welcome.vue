@@ -1,8 +1,8 @@
 <template>
   <div class="welcome">
-    <p>
+    <h2>
        A nice welcome message goes here.
-    </p>
+    </h2>
   </div>
 </template>
 
@@ -30,5 +30,12 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.welcome {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>

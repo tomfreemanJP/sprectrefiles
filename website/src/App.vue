@@ -1,7 +1,10 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    <router-link to="/blog">Blog</router-link>
+    <router-link to="/projects">Projects</router-link>
+    <router-link to="/podcast">Podcast</router-link>
+    <router-link to="/todo">Todo</router-link>
   </div>
   <router-view />
 </template>
@@ -16,7 +19,11 @@
 }
 
 #nav {
-  padding: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
 
 #nav a {
