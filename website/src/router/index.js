@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Home.vue";
+//import BlogHome from '@/components/BlogHome'
+import BlogPost from '@/components/BlogPost'
 
 const routes = [
   {
@@ -18,6 +20,12 @@ const routes = [
     name: "Blog",
     component: () =>
       import(/* webpackChunkName: "blog" */ "../views/Blog.vue"),
+    //component: BlogHome
+  },
+  {
+    path: '/blog/:slug',
+    name: 'blog-post',
+    component: BlogPost
   },
   {
     path: "/projects",

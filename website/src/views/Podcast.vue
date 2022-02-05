@@ -22,8 +22,8 @@ a {
 
 .podcast {
   position: fixed;
-  top: 25%;
-  left: 50%;
+  top: 15%;
+  left: 35%;
   transform: translate(-50%, -50%);
 }
 </style>

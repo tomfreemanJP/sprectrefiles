@@ -31,8 +31,8 @@
 #nav {
   position: fixed;
   width: 300px;
-  top: 50%;
-  left: 80%;
+  top: 30%;
+  left: 90%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
