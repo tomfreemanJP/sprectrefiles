@@ -1,4 +1,10 @@
 <template>
+  <mq-layout mq="mobile">
+    <div id="nav">
+    <router-link to="/about"><img src="./assets/about.png"/></router-link>
+    </div>
+  </mq-layout>
+  <mq-layout mq="laptop+">
   <div id="logo">
   <router-link to="/"><img src="./assets/logo.png"/></router-link>
   </div>
@@ -9,6 +15,7 @@
     <router-link to="/podcast"><img src="./assets/podcast.png"/></router-link>
     <router-link to="/todo"><img src="./assets/todo.png"/></router-link>
   </div>
+  </mq-layout>
   <router-view />
 </template>
 

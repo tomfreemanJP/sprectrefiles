@@ -11,6 +11,7 @@
     "buttercms": "^1.2.8",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
+    "vue-mq": "^1.0.1",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
