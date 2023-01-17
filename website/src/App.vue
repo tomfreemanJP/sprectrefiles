@@ -1,23 +1,36 @@
 <template>
-  <mq-layout mq="mobile">
+  <!-- <mq-layout mq="mobile">
     <div id="nav">
-    <router-link to="/about"><img src="./assets/about.png"/></router-link>
+    <router-link to="/about"><img src="./assets/about_off.png"/></router-link>
     </div>
-  </mq-layout>
+  </mq-layout> -->
   <mq-layout mq="laptop+">
   <div id="logo">
   <router-link to="/"><img src="./assets/logo.png"/></router-link>
   </div>
   <div id="nav">
-    <router-link to="/about"><img src="./assets/about.png"/></router-link>
-    <router-link to="/blog"><img src="./assets/blog.png"/></router-link>
-    <router-link to="/projects"><img src="./assets/projects.png"/></router-link>
-    <router-link to="/podcast"><img src="./assets/podcast.png"/></router-link>
-    <router-link to="/todo"><img src="./assets/todo.png"/></router-link>
+    <router-link to="/about"><img src="{{imgURL}}" @click="changeImage"/></router-link>
+    <router-link to="/blog"><img src="./assets/blog_off.png"/></router-link>
+    <router-link to="/projects"><img src="./assets/projects_off.png"/></router-link>
+    <router-link to="/podcast"><img src="./assets/podcast_off.png"/></router-link>
+    <router-link to="/todo"><img src="./assets/todo_off.png"/></router-link>
   </div>
   </mq-layout>
   <router-view />
 </template>
+
+<script>
+export default {
+  data: () => ({
+    imgURL: "./assets/about_off.png"
+  }),
+  methods: {
+    changeImage: function() {
+      this.imgURL="./assets/about_on.png"
+    }
+  }
+};
+</script>
 
 <style>
 #logo {
@@ -30,9 +43,10 @@
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #264666;
 }
 
 #nav {
@@ -54,6 +68,10 @@
 #nav a.router-link-exact-active {
   color: #42b983;
   transform: scale(105%, 105%)
+}
+
+* {
+  background-color: black;
 }
 
 </style>
