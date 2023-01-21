@@ -9,7 +9,7 @@
   <router-link to="/"><img src="./assets/logo.png"/></router-link>
   </div>
   <div id="nav">
-    <router-link to="/about"><img src="{{imgURL}}" @click="changeImage"/></router-link>
+    <router-link to="/about"><img :src="require(''+imgURL)" @click="changeImage"/></router-link>
     <router-link to="/blog"><img src="./assets/blog_off.png"/></router-link>
     <router-link to="/projects"><img src="./assets/projects_off.png"/></router-link>
     <router-link to="/podcast"><img src="./assets/podcast_off.png"/></router-link>
@@ -21,12 +21,18 @@
 
 <script>
 export default {
-  data: () => ({
-    imgURL: "./assets/about_off.png"
-  }),
+  data: () => {
+    return {
+      imgURL: "./assets/about_off.png"
+    }
+  },
   methods: {
     changeImage: function() {
-      this.imgURL="./assets/about_on.png"
+      if(this.imgURL==="./assets/about_off.png") {
+        this.imgURL="./assets/about_on.png"
+      } else {
+        this.imgURL="./assets/about_off.png"
+      }
     }
   }
 };
